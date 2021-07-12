@@ -1,0 +1,94 @@
+body {
+    font-size: 14px;
+    color: #222;
+    font-family: arial,sans-serif;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-areas:    
+        "left-header . right-header"
+        ". content ."
+        "advert . ."
+        "footer footer footer"
+}
+
+
+
+.left-nav {
+    padding: 25px 25px 25px;
+    grid-area: left-header;
+    align-self: start;
+    align-items: center;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 20px;
+
+}
+.right-nav {
+    padding: 25px 25px 25px;
+    padding: 25px 25px 25px;
+    align-self: start;
+    grid-area: right-header;
+    justify-items: end;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+}
+
+.main-search {
+    grid-area: content;
+    justify-self: center;
+}
+
+input {
+    justify-self:  center;
+}
+
+.country {
+    padding: 25px 25px 25px;
+    grid-area: advert;
+    align-self: end;
+}
+
+.footer {
+    /* background-color: rgb(218, 220, 224); */
+    
+    background-color: rgba(0,0,0,.08);
+    border-top: 1pxa solid #dadce0;
+    grid-area: footer;
+    align-self: end;
+    display: grid;
+    padding: 10px 30px 10px;
+    grid-template-areas: "link . . . . . . ."
+    "link1 link2 link3 . . link4 link5 link6 ";
+    
+}
+
+#link1{
+    grid-area: link1;
+}
+#link2{
+    grid-area: link2;
+}
+#link3{
+    grid-area: link3;
+}
+#link4{
+    grid-area: link4;
+}
+#link5{
+    grid-area: link5;
+}
+#link6{
+    grid-area: link6;
+}
+
+
+#profile-photo{
+    border-radius: 50%;
+    height: 2em;
+
+}
