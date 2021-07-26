@@ -40,7 +40,15 @@ body {
 
 .main-search {
     grid-area: content;
-    justify-self: center;
+}
+
+.search-box {
+    border: 1px solid #ccc;
+    border-radius: 20px;
+}
+
+.search-input {
+    border: 0;
 }
 
 input {
