@@ -38,21 +38,68 @@ body {
     
 }
 
+#logo{
+    margin-bottom: 2em;
+}
+
 .main-search {
     grid-area: content;
+    display: grid;
+    align-items: center;
+    justify-items: center;
 }
 
 .search-box {
     border: 1px solid #ccc;
+    width: 35em;
+    /* border: 4px blue solid; */
     border-radius: 20px;
+    display: grid;
+    grid-template-columns: 10% 85%;
+    height: 35px;
+    
 }
 
+.search-buttons{
+    align-items: center;
+}
+
+button{
+    margin: 2em 2em 2em 2em;
+    padding: .5em 1em .5em 1em;
+    background-color: white;
+    border-color: white;
+    border: 1px solid white;    
+    border-radius: 5px;
+    font-size:14px;
+
+    
+}
+
+button:hover{
+    border-color: #ccc;
+}
 .search-input {
-    border: 0;
+    /* border: 4px blue solid; */
+    border: 0px;
+    width: 100%;
+    font-size: 14px;
+    
+    justify-self: flex-start; 
+}
+
+#search-icon {
+    /* border: 4px blue solid; */
+    align-self: center; 
+    /* display: inline-block; width: 32px; */
+    padding-left: 10px;
+    
+    justify-self: flex-start;
 }
 
 input {
     justify-self:  center;
+    /* border: 4px red solid; */
 }
 
 .country {
@@ -61,39 +108,60 @@ input {
     align-self: end;
 }
 
+.material-icons.md-14 { font-size: 20px; 
+padding-left: 5px;}
+
 .footer {
     /* background-color: rgb(218, 220, 224); */
+    /* border: 2px red solid; */
     
-    background-color: rgba(0,0,0,.08);
-    border-top: 1pxa solid #dadce0;
+    background-color: rgba(0,0,0,.02);
+    border-top: 1px solid #dadce0;
     grid-area: footer;
     align-self: end;
     display: grid;
     padding: 10px 30px 10px;
-    grid-template-areas: "link . . . . . . ."
-    "link1 link2 link3 . . link4 link5 link6 ";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "link1 link1"
+                        "link2 link3";
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
     
 }
 
-#link1{
+.footer-a{
+    /* border: 2px red solid; */
+    
     grid-area: link1;
-}
-#link2{
-    grid-area: link2;
-}
-#link3{
-    grid-area: link3;
-}
-#link4{
-    grid-area: link4;
-}
-#link5{
-    grid-area: link5;
-}
-#link6{
-    grid-area: link6;
-}
+    /* display: grid; */
+    align-items: center;
 
+}
+.footer-b{
+    grid-area: link2;
+    /* border: 2px red solid; */
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(0px, 30%));
+    justify-items: center;
+    /* grid-auto-flow: row dense; */
+    align-items: center;
+    
+
+}
+.footer-c{
+    /* border: 2px red solid; */
+    grid-area:link3;
+    
+    grid-template-columns: repeat(auto-fill, minmax(60px, 30%));
+    
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+    
 
 #profile-photo{
     border-radius: 50%;
