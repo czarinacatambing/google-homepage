@@ -33,10 +33,21 @@ body {
     align-self: start;
     grid-area: right-header;
     justify-items: end;
+    align-items: center;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     
 }
+
+
+.right-nav > * {
+    padding: 0em .5em 0em .5em;
+}
+
+.left-nav > * {
+    padding: 0em .5em 0em .5em;
+}
+
 
 #logo{
     margin-bottom: 2em;
@@ -108,6 +119,9 @@ input {
     grid-area: advert;
     align-self: end;
 }
+#translation{
+    font-size: 13px;
+}
 
 .material-icons.md-14 { font-size: 20px; 
 padding-left: 5px;}
@@ -122,17 +136,17 @@ padding-left: 5px;}
     align-self: end;
     display: grid;
     padding: 10px 30px 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr .10fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "link1 link1"
-                        "link2 link3";
+    grid-template-areas: "link1 link1 link1"
+                        "link2 . link3";
     position: fixed;
     bottom: 0px;
     width: 100%;
     
 }
 
-.footer-a{
+.footer-top{
     /* border: 2px red solid; */
     
     grid-area: link1;
@@ -140,26 +154,28 @@ padding-left: 5px;}
     align-items: center;
 
 }
-.footer-b{
+.footer-left{
     grid-area: link2;
     /* border: 2px red solid; */
     
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(0px, 30%));
-    justify-items: center;
+    display: flex;
+    flex-direction: row;
+    /* grid-template-columns: repeat(auto-fill, minmax(10%, 30%)); */
+    /* justify-items: right; */
+    justify-content: flex-end;
     /* grid-auto-flow: row dense; */
     align-items: center;
     
 
 }
-.footer-c{
+.footer-right{
     /* border: 2px red solid; */
     grid-area:link3;
     
-    grid-template-columns: repeat(auto-fill, minmax(60px, 30%));
+    /* grid-template-columns: repeat(auto-fill, minmax(10px, 20%)); */
     
-    display: grid;
-    justify-items: center;
+    display: flex;
+    justify-content: flex-start;
     align-items: center;
 }
     
@@ -169,3 +185,14 @@ padding-left: 5px;}
     height: 2em;
 
 }
+
+
+ .footer-left > * {
+    padding: 0em .5em 0em .5em;
+}
+
+.footer-right > * {
+    padding: 0em .5em 0em .5em;
+    align-self: right;
+} 
+
