@@ -7,7 +7,7 @@ body {
     margin-right: 0px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-rows: .40fr 1fr 1fr; 
     grid-template-areas:    
         "left-header . right-header"
         ". content ."
@@ -99,6 +99,7 @@ button:hover{
 
 input {
     justify-self:  center;
+    font-size: 20px;
     /* border: 4px red solid; */
 }
 
